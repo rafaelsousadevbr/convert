@@ -1,5 +1,6 @@
 const amount = document.getElementById('amount');
 
 amount.addEventListener('input', () => {
-    const value = amount.value;
+    const hasCharactersRegex = /[^\d,]/g;
+    amount.value = amount.value.replace(hasCharactersRegex, '');
 });
